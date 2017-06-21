@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+	body{
+		position:relative;
+		padding: 0;
+		margin: 0;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="3.jpg" style="width:100%;"alt="">
+	</div>
+</body>
+<script src="dialog.js"></script>
+<script>
+new dialog({
+	content:'Hello World',
+	fontSize:'18px',
+	border:'1px solid blue',
+	bgcolor:'rgba(204,233,255,.7)'
+	},cb);
+function cb(){
+	console.log('MyLove');
+}
+</script>
+</html>
+

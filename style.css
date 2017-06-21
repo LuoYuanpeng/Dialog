@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.dialog{
+ 	position:absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top:-30px;
+    opacity: 0;
+    border-radius:0 4px 4px 0;
+    padding:20px 50px;
+    max-width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+    z-index:1000;
+    animation:show 1s ease-out;
+    -webkit-animation:show 1s ease-out;
+    -webkit-animation-fill-mode:forwards;
+}
+
+@keyframes show{
+	from{
+		top: -30px;
+		opacity: 0;
+	}
+	to{
+		top:0;
+		opacity: 1;
+	}
+}
