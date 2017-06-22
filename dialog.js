@@ -21,23 +21,26 @@
 
             //判断是否输入警告内容
             if(!configs.content){
-              return error;
+              console.log(error);
+              return false;
             }
 
             el = document.createElement('div');
-            body = document.getElementsByTagName('body')[0];
+            body = document.body;
             dialogEl = this.addStyle(el,configs);
 
             body.appendChild(dialogEl);
-            // this.remove(body,callback);
+            this.remove(body,callback);
     },
+
     //初始化弹出框的样式和内容
-    addStyle: function(obj,conf) {
-      obj.setAttribute("style","font-size:"+conf.fontSize+";border:"+conf.border+";background:"+conf.backGround);
-      obj.className = 'dialog';
-      obj.innerHTML = conf.content;
-      return obj;
+    addStyle: function(el,conf) {
+      el.setAttribute("style","font-size:"+conf.fontSize+";border:"+conf.border+";background:"+conf.backGround);
+      el.className = 'dialog';
+      el.innerHTML = conf.content;
+      return el;
     },
+
     //移除弹出框节点
     remove:function(body,callback) {
       var dia = document.getElementsByClassName('dialog')[0];
