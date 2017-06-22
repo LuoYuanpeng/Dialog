@@ -29,7 +29,7 @@
             dialogEl = this.addStyle(el,configs);
 
             body.appendChild(dialogEl);
-            this.remove(body,callback);
+            // this.remove(body,callback);
     },
     //初始化弹出框的样式和内容
     addStyle: function(obj,conf) {
